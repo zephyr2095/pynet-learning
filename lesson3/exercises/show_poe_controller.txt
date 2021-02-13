@@ -1,0 +1,14 @@
+--- JUNOS 18.2R3-S3.11 Kernel 32-bit  JNPR-11.0-20200124.95c8806_buil
+{master:2}
+jwb25@MK-Crawford-SW01> show poe controller 
+Controller  Maximum   Power         Guard    Management   Status        Lldp
+index       power     consumption   band                                Priority 
+   0**       740W      59.00W          0W     Class        AT_MODE       Disabled
+   1**        740W      25.40W          0W     Class        AT_MODE       Disabled
+   2**         740W      25.20W          0W     Class        AT_MODE       Disabled
+   3**       740W      15.60W          0W     Class        AT_MODE       Disabled
+  **New PoE software upgrade available. 
+ Use 'request system firmware upgrade poe fpc-slot <slot>' 
+ This procedure will take around 10 minutes (recommended to be performed during maintenance)
+
+{master:2}
