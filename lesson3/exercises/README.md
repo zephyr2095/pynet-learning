@@ -1,11 +1,15 @@
-1. Read the "show_vlan.txt" file into your program. Loop through the lines in this file and extract all of the VLAN_ID, VLAN_NAME combinations. From these VLAN_ID and VLAN_NAME construct a new list where each element in the list is a tuple consisting of (VLAN_ID, VLAN_NAME). Print this data structure to the screen. Your output should look as follows:
+# Lesson 3 Exercises 
+
+### Exercise 1
+Read the "show_vlan.txt" file into your program. Loop through the lines in this file and extract all of the VLAN_ID, VLAN_NAME combinations. From these VLAN_ID and VLAN_NAME construct a new list where each element in the list is a tuple consisting of (VLAN_ID, VLAN_NAME). Print this data structure to the screen. Your output should look as follows:
 [('1', 'default'),
  ('400', 'blue400'),
  ('401', 'blue401'),
  ('402', 'blue402'),
  ('403', 'blue403')]
 
-2. Read the contents of the "show_arp.txt" file. Using a for loop, iterate over the lines of this file. Process the lines of the file and separate out the ip_addr and mac_addr for each entry into a separate variable.
+### Exercise 2
+Read the contents of the "show_arp.txt" file. Using a for loop, iterate over the lines of this file. Process the lines of the file and separate out the ip_addr and mac_addr for each entry into a separate variable.
 
 Add a conditional statement that searches for '10.220.88.1'. If 10.220.88.1 is found, print out the string "Default gateway IP/Mac" and the corresponding IP address and MAC Address.
 
@@ -13,11 +17,11 @@ Using a conditional statement, also search for '10.220.88.30'. If this IP addres
 
 Keep track of whether you have found both the Default Gateway and the Arista3 switch. Once you have found both of these devices, 'break' out of the for loop.
 
+### Exercise 3
+Read the 'show_lldp_neighbors_detail.txt' file. Loop over the lines of this file. Keep reading the lines until you have encountered the remote "System Name" and remote "Port id". Save these two items into variables and print them to the screen. You should extract only the system name and port id from the lines (i.e. your variables should only have 'twb-sf-hpsw1' and '15'). Break out of your loop once you have retrieved these two items.
 
-3.  Read the 'show_lldp_neighbors_detail.txt' file. Loop over the lines of this file. Keep reading the lines until you have encountered the remote "System Name" and remote "Port id". Save these two items into variables and print them to the screen. You should extract only the system name and port id from the lines (i.e. your variables should only have 'twb-sf-hpsw1' and '15'). Break out of your loop once you have retrieved these two items.
-
-
-4. You have the following data structure:
+### Exercise 4
+You have the following data structure:
 arp_table = [('10.220.88.1', '0062.ec29.70fe'),
  ('10.220.88.20', 'c89c.1dea.0eb6'),
  ('10.220.88.21', '1c6a.7aaf.576c'),
@@ -40,7 +44,8 @@ Loop over this data structure and extract all of the MAC addresses. Process all 
 The hex digits should be capitalized. Additionally, there should be a colon between each octet in the MAC address.
 
 
-5. [Optional/bonus] 
+### Exercise 5
+[Optional/bonus] 
 
 *** Note, to actually test this in your environment, change the test IP addresses to something in your environment that you can ping successfully. ***
 
