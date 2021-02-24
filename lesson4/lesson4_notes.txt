@@ -1,0 +1,114 @@
+I3-C02D61DRMD6M:lesson4 jwb25$ ipython
+Python 3.8.2 (default, Nov  4 2020, 21:23:28)
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.19.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: net_device = {}
+
+In [2]: type(net_device)
+Out[2]: dict
+
+In [3]: net_device['ip_addr'] = '192.168.1.1'
+
+In [4]: var1 = 'cisco'
+
+In [5]: var2 = 'ios'
+
+In [6]: net_device['device_type'] = var2
+
+In [7]: net_device['vendor'] = var1
+
+In [8]: net_device
+Out[8]: {'ip_addr': '192.168.1.1', 'device_type': 'ios', 'vendor': 'cisco'}
+
+In [9]: net_device['device_type']
+Out[9]: 'ios'
+
+In [10]: vendor_list = []
+
+In [11]: vendor_list = ['cisco', 'juniper', 'arista', 'extreme']
+
+In [12]: net_device['vendor'] = vendor_list
+
+In [13]: net_device
+Out[13]:
+{'ip_addr': '192.168.1.1',
+ 'device_type': 'ios',
+ 'vendor': ['cisco', 'juniper', 'arista', 'extreme']}
+
+In [14]: net_device['vendor']
+Out[14]: ['cisco', 'juniper', 'arista', 'extreme']
+
+In [15]: for name in net_device['vendor']:
+    ...:     if name == 'arista':
+    ...:         print('Vendor name is Arista!')
+    ...:
+Vendor name is Arista!
+
+In [16]: for name in net_device['vendor']:
+    ...:     if name == 'arista':
+    ...:         print('Vendor name is Arista!')
+    ...:     else:
+    ...:         print('Vendor not named Arista')
+    ...:
+Vendor not named Arista
+Vendor not named Arista
+Vendor name is Arista!
+Vendor not named Arista
+
+In [17]:
+
+In [17]:
+
+In [17]: my_ip = ['1.1.1.1', '2.2.2.2', '192.168.1.1', '1.1.1.1', '10.10.10.1', '1.1.1.1']
+
+In [18]: set(my_ip)
+Out[18]: {'1.1.1.1', '10.10.10.1', '192.168.1.1', '2.2.2.2'}
+
+In [19]: set_ip1 = {'1.1.1.1', '2.2.2.2', '8.8.8.8', '8.8.4.4'}
+
+In [20]: type(set_ip1)
+Out[20]: set
+
+In [21]: set_ip2 = {'172.30.1.1', '1.1.1.1', '75.75.75.75', '192.168.1.1', '8.8.8.8'}
+
+In [22]: set_ip1 | set_ip2
+Out[22]:
+{'1.1.1.1',
+ '172.30.1.1',
+ '192.168.1.1',
+ '2.2.2.2',
+ '75.75.75.75',
+ '8.8.4.4',
+ '8.8.8.8'}
+
+In [23]: set_ip1 & set_ip2
+Out[23]: {'1.1.1.1', '8.8.8.8'}
+
+In [24]: set_ip1 - set_ip2
+Out[24]: {'2.2.2.2', '8.8.4.4'}
+
+In [25]: set_ip2 = set_ip1
+
+In [26]: set_ip1 ^ set_ips2
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-26-342b5b483f8d> in <module>
+----> 1 set_ip1 ^ set_ips2
+
+NameError: name 'set_ips2' is not defined
+
+In [27]: set_ip1 ^ set_ip2
+Out[27]: set()
+
+In [28]: set_ip2 = {'172.30.1.1', '1.1.1.1', '75.75.75.75', '192.168.1.1', '8.8.8.8'}
+
+In [29]: set_ip1 = {'1.1.1.1', '2.2.2.2', '8.8.8.8', '8.8.4.4'}
+
+In [30]: set_ip1 ^ set_ip2
+Out[30]: {'172.30.1.1', '192.168.1.1', '2.2.2.2', '75.75.75.75', '8.8.4.4'}
+
+In [31]: set_ip1 ^ set_ip2
+Out[31]: {'172.30.1.1', '192.168.1.1', '2.2.2.2', '75.75.75.75', '8.8.4.4'}
+
+In [32]:
