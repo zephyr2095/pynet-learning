@@ -45,3 +45,14 @@ print()
 print(f"Model number: {device_info['name']}")
 print(f"Memory: {device_info['memory']}")
 print()
+
+
+# Alternate method - from Kirk Byers' Github answers for lesson exercises
+#
+# match = re.search(
+#    r"^Cisco (?P<model>\S+).* with (?P<memory>\S+) bytes of memory",
+#    show_version,
+#    flags=re.M,
+# )
+# model = match.groupdict()["model"]
+# memory = match.groupdict()["memory"]
