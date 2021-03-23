@@ -1,0 +1,49 @@
+In [1]: def print_ip(ip_addr, username='admin', password='cisco123'):
+   ...:     print("My IP address is: {}".format(ip_addr))
+   ...:     print("My username is: {}".format(username))
+   ...:     print("My password is: {}".format(password))
+   ...:     return
+   ...:
+
+In [2]: print_ip('192.168.1.1')
+My IP address is: 192.168.1.1
+My username is: admin
+My password is: cisco123
+
+In [3]: print_ip('192.168.1.1', 'jbowman')
+My IP address is: 192.168.1.1
+My username is: jbowman
+
+
+You can pass list into function. Use "*" to pass in values of list to all arguments of function 
+
+In [8]: my_list = ['10.1.1.1', 'admin', 'admin123']
+
+In [9]: print_ip(my_list)
+My IP address is: ['10.1.1.1', 'admin', 'admin123']
+My username is: admin
+My password is: cisco123
+
+
+In [14]: print_ip(*my_list)
+My IP address is: 10.1.1.1
+My username is: admin
+My password is: admin123
+
+
+You can pass dictionary key value pairs into function. Use "**" in front of dictionary variabl name
+
+In [16]: my_dict = {
+    ...:     'ip_addr': '172.16.1.1',
+    ...:     'username': 'admin',
+    ...:     'password': 'cisco98765'
+    ...: }
+
+In [17]:
+
+In [17]: print_ip(**my_dict)
+My IP address is: 172.16.1.1
+My username is: admin
+My password is: cisco98765
+
+In [18]:
