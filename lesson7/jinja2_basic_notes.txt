@@ -1,0 +1,76 @@
+In [1]: import jinja2
+
+In [2]: bgp_vars = {}
+
+In [3]: bgp_template = '''
+   ...: feature bgp
+   ...: router bgp 10
+   ...:   address-family ipv4 unicast
+   ...:     network 10.10.200.0/24
+   ...:     network 10.10.201.0/24
+   ...:     network 10.10.202.0/24
+   ...:   neighbor 10.255.255.2 remote-as 20
+   ...:     update-source loopback1
+   ...:     ebgp-multihop 2
+   ...:     address-family ipv4 unicast
+   ...:
+   ...: '''
+
+In [4]: t = jinja2.Template(bgp_template)
+
+In [5]: print(t.render(bgp_vars))
+
+feature bgp
+router bgp 10
+  address-family ipv4 unicast
+    network 10.10.200.0/24
+    network 10.10.201.0/24
+    network 10.10.202.0/24
+  neighbor 10.255.255.2 remote-as 20
+    update-source loopback1
+    ebgp-multihop 2
+    address-family ipv4 unicast
+
+
+In [6]:
+
+In [6]:
+
+In [6]: bgp_vars = {
+   ...:     "peer1_ip": "10.255.255.2",
+   ...:     "peer1_as": 20,
+   ...: }
+
+In [7]:
+
+In [7]: bgp_template = '''
+   ...:    ...: feature bgp
+   ...:    ...: router bgp 10
+   ...:    ...:   address-family ipv4 unicast
+   ...:    ...:     network 10.10.200.0/24
+   ...:    ...:     network 10.10.201.0/24
+   ...:    ...:     network 10.10.202.0/24
+   ...:    ...:   neighbor {{ peer1_ip }} remote-as {{ peer1_as }}
+   ...:    ...:     update-source loopback1
+   ...:    ...:     ebgp-multihop 2
+   ...:    ...:     address-family ipv4 unicast
+   ...:    ...:
+   ...:    ...: '''
+
+In [8]:
+
+In [8]: print(t.render(bgp_vars))
+
+feature bgp
+router bgp 10
+  address-family ipv4 unicast
+    network 10.10.200.0/24
+    network 10.10.201.0/24
+    network 10.10.202.0/24
+  neighbor 10.255.255.2 remote-as 20
+    update-source loopback1
+    ebgp-multihop 2
+    address-family ipv4 unicast
+
+
+In [9]:
