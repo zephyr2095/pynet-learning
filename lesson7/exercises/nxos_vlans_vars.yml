@@ -1,0 +1,9 @@
+---
+vlans:
+  100:
+    vlan_name: Customer_A
+    vn_segment: 200100
+  200:
+    vlan_name: Customer_B
+    vn_segment: 200200
+...

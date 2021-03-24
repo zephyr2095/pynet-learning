@@ -1,0 +1,11 @@
+{%- for int_name, int_dict in interfaces.items() %}
+interface {{ int_name }}
+  {%- if int_dict.mode == 'access' %}
+  switchport mode access
+  switchport access vlan {{ int_dict.vlan }}
+  {%- else %}
+  switchport mode trunk 
+  switchport trunk native vlan {{ int_dict.native_vlan }}
+  switchport trunk allowed vlan {{ int_dict.trunk_valns }}
+  {%- endif %}
+{%- endfor %}

@@ -1,0 +1,6 @@
+{ # nxos vlan template file #}
+{% for vlan_id, vlan_dict in vlans.items() %}
+vlan {{ vlan_id }}
+  name {{ vlan_dict.vlan_name }}
+  vn-segment {{ vlan_dict.vn_segment }}
+{%- endfor %}
