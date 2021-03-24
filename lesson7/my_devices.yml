@@ -1,0 +1,39 @@
+---
+# This is a list
+#- 10.1.1.1
+#- 20.2.2.2
+#- 30.3.3.3
+#- 192.168.1.1
+
+# This is a dictionary
+#rtr1: 1.1.1.1
+#rtr2: 1.1.100.1
+#rtr3: 192.168.1.1
+#rtr4: 172.15.77.66
+
+# More complicated nested dictionaries
+rtr1:
+  ip_addr: 10.1.1.1
+  username: admin
+  password: cisco123
+  device_type: juniper_junos
+  interfaces:
+    - ge-0/0/0
+    - ge-0/0/1
+    - ge-0/0/2
+  bgp_peers:
+    - 10.100.1.1
+    - 10.200.1.1
+    - 10.300.1.1
+rtr2:
+  ip_addr: 10.1.1.22
+  username: cisco
+  password: admin12345
+  device_type: cisco_nxos
+  interfaces:
+    - eth1/1
+    - eth1/2
+  bgp_peers:
+    - 200.1.1.1
+    - 200.2.200.1
+...
